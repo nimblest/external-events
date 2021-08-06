@@ -46,7 +46,8 @@ class UserUpdated extends Event implements ExternalEventsInterface
     public function __construct(
         User $user
     ) {
-        $this->topic = sprintf('arn:aws:sns:YOUR-ARN-HERE', config('external_events.environment'));
+        // Example topic might be production-user-update-bus and staging-user-update-bus
+        $this->topic = sprintf('arn:aws:sns:%s-YOUR-TOPIC', config('external_events.environment'));
         $this->user = $user;
     }
 
