@@ -1,0 +1,28 @@
+{
+    "name": "nimblest/ExternalEvents",
+    "type": "library",
+    "description": "Quickly create a connection to SNS topics. Just create a Laravel listener and send data up to the topic of your choice. Easy setup using Spatie Fractal.",
+    "keywords": ["laravel","aws","listeners","events","sns","php","spatie"],
+    "homepage": "http://danogillette.com",
+    "require": {
+        "php": "^7.3"
+    },
+    "suggest": {
+        "laravel/framework": "Needed to create a listener to attach to the event.",
+        "spatie/laravel-fractal": "Used to transform the data you send up to your topic.",
+        "aws/aws-sdk-php-laravel": "Needed to setup the connection to SNS."
+    },
+    "authors": [
+        {
+            "name": "Dano Gillette",
+            "email": "dgillette25@gmail.com",
+            "homepage": "http://danogillette.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ExternalEvents\\": "src/"
+        }
+    }
+}
